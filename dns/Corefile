@@ -1,0 +1,23 @@
+.:53 {
+    prometheus 0.0.0.0:9153
+    forward . 8.8.8.8 1.1.1.1 {
+        max_concurrent 200
+    }
+    cache {
+        success 3600
+        denial 60
+    }
+    loadbalance
+    minimal
+    log
+    errors
+}
+
+zone.com:53 {
+    file /zones/zone.db
+    reload
+    cache
+    minimal
+    log
+    errors
+}
