@@ -1,0 +1,14 @@
+$ORIGIN replacezone.com.
+$TTL 3600
+
+@   IN  SOA dns.replacezone.com. replaceyour.email.com. (
+        2025060101 ; serial
+        7200       ; refresh
+        3600       ; retry
+        1209600    ; expire
+        3600 )     ; minimum
+
+    IN  NS  dns.replacezone.com.
+
+@           IN A 192.168.1.1
+dns         IN A 192.168.1.1
